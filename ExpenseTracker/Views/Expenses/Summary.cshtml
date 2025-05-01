@@ -1,0 +1,101 @@
+﻿@model IEnumerable<dynamic>
+
+@{
+    ViewData["Title"] = "Expense Summary";
+}
+
+<div class="container mt-5">
+    <!-- Expense Summary Section -->
+    <div class="row">
+        <div class="col-12">
+            <h1 class="mb-4">Expense Summary</h1>
+            <p class="lead">View the total expenses grouped by category.</p>
+            @if (Model.Any())
+            {
+                <table class="table table-striped table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Category</th>
+                            <th>Total Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Category</td>
+                                <td>@item.Total.ToString("C")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p class="text-muted">No expenses recorded yet.</p>
+            }
+            <a asp-action="Index" class="btn btn-secondary mt-3">Back to Expenses</a>
+        </div>
+    </div>
+
+    <!-- About the Website Section -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <h2>About Expense Tracker</h2>
+            <p>
+                The Expense Tracker is a user-friendly web application designed to help individuals manage their personal finances efficiently. Built using ASP.NET Core MVC and Entity Framework Core, it allows users to record, view, and summarize expenses with ease. Key features include adding expenses with categories, viewing detailed expense lists, and generating summaries to track spending patterns.
+            </p>
+        </div>
+    </div>
+
+    <!-- Why It’s Needed Section -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <h2>Why Expense Tracking Matters</h2>
+            <p>
+                Effective financial management is crucial for achieving personal and professional goals. The Expense Tracker empowers users to monitor their spending, identify trends, and make informed budgeting decisions. Whether you're saving for a big purchase or simply keeping tabs on daily expenses, this tool provides clarity and control over your finances.
+            </p>
+        </div>
+    </div>
+
+    <!-- About Me Section -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <h2>About the Developer</h2>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Md. Taher Bin Omar Hijbullah</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Technology Innovator | Machine Learning Enthusiast</h6>
+                    <p class="card-text">
+                        I’m a Bachelor of Computer Science and Engineering student at IUBAT, passionate about creating impactful solutions in machine learning, IoT, and AI-driven automation. With hands-on experience in projects like a University Bus GPS Tracking System, IoT-Based Smart Farming, and IoT Botnet Detection, I strive to push the boundaries of technology. My skills include C#, Python, JavaScript, MySQL, and more, backed by certifications and awards like 1st Place at the Narsingdi Science Fair and 2nd Place in the GP Academy IoT Competition.
+                    </p>
+                    <p class="card-text">
+                        <strong>Contact:</strong> <a href="mailto:hijbullah119445@gmail.com">hijbullah119445@gmail.com</a> | +8801572915532<br />
+                        <strong>GitHub:</strong> <a href="https://github.com/hijbullahx" target="_blank">hijbullahx</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Info Section -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <h2>Explore My Work</h2>
+            <p>
+                Check out some of my notable projects:
+            </p>
+            <ul>
+                <li><strong>University Bus GPS Tracking System</strong>: A real-time tracking platform for university buses in Bangladesh.</li>
+                <li><strong>IoT-Based Smart Weather & Gas Quality Display</strong>: A system using ESP8266 and sensors to monitor environmental conditions.</li>
+                <li><strong>Automated IoT-Based Smart Farming System</strong>: A smart irrigation solution with ESP32 and Blynk.</li>
+                <li><strong>IoT Botnet Detection & Security</strong>: Research on ML-based solutions for IoT security.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Copyright Footer -->
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>&copy; 2025 Expense Tracker. All rights reserved. Developed by Md. Taher Bin Omar Hijbullah.</p>
+</footer>

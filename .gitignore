@@ -1,0 +1,8 @@
+# ASP.NET Core
+bin/
+obj/
+*.db
+*.sqlite
+appsettings.Development.json
+.vs/
+*.csproj.user

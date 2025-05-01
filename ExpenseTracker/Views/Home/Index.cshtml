@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container mt-5">
+    <!-- Profile Section -->
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <h1 class="display-4">Welcome to Expense Tracker</h1>
+            <p class="lead">Developed by <strong>Md. Taher Bin Omar Hijbullah</strong></p>
+            <p>A simple tool to track and manage your daily expenses with ease.</p>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="row mt-4">
+        <div class="col-md-6 text-center">
+            <a asp-controller="Expenses" asp-action="Index" class="btn btn-primary btn-lg">Manage Expenses</a>
+        </div>
+        <div class="col-md-6 text-center">
+            <a asp-controller="Expenses" asp-action="Summary" class="btn btn-info btn-lg">View Summary</a>
+        </div>
+    </div>
+
+    <!-- Additional Info -->
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <h3>About This Project</h3>
+            <p>
+                This application was built using ASP.NET Core MVC and Entity Framework Core.
+                It allows users to add, view, and summarize expenses, with data stored in a SQLite database.
+                Future enhancements may include user authentication and advanced analytics.
+            </p>
+        </div>
+    </div>
+</div>
